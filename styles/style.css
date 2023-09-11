@@ -1,0 +1,18 @@
+:root {
+    --accent: #a955f8;
+    --brad: 20px;
+    --font-light: #fff;
+    --font-dark: #444;
+    --background: #fce8ff;
+    --card: #333;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+}
