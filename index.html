@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/nav.css">
-    <link rel="stylesheet" href="styles/demo.css">
+    <link rel="stylesheet" href="styles/hero.css">
 </head>
 
 <body>
@@ -16,71 +16,33 @@
     <nav>
         <div class="nav-container">
             <div class="nav-logo">
-                Coda
+                <img class="logo" src="./images/logo.png" alt="logo"> Coda
             </div>
             <div class="nav-links">
                 <a href="#">Home</a>
                 <a href="#">About</a>
                 <a href="#">Download</a>
                 <a href="#">Documentation</a>
-                <a href="#">News</a>
+                <a href="#">Contribute</a>
             </div>
         </div>
     </nav>
 
-    <!-- Syntax demo -->
-    <section class="demo">
-        <div class="demo-container">
-            <div class="demo-code">
-                <pre>
-    const x = {
-        a: {
-            b: "Hello",
-        },
-        b: "World",
-        c: "!"
-    }
-    
-    print(x.a.b + " " + x.b + x.c);
-                </pre>
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-title-holder">
+                <h2 class="hero-title">
+                    The Coda Programming Language
+                </h2>
             </div>
-            <div class="demo-card">
-                Coda is a powerful and versatile C++-based interpreted language that has been designed to streamline the
-                development and execution of code. In this wiki, we'll explore the key features and advantages that Coda
-                brings to the table, enabling you to become more productive and efficient in your programming endeavors.
+            <div class="hero-button-holder">
+                <button class="button hero-download">Download</button>
+                <button class="button hero-wiki">Wiki</button>
             </div>
-        </div>
-        <div class="demo-cta">
-            Python is a programming language that lets you work quickly
-            and integrate systems more effectively. <em>Learn More</em>
-        </div>
-    </section>
+        </section>
 
-    <section class="widget">
-        <div class="widget-container">
-            <div class="widget-card">
-                <h2>Get Started</h2>
-                <p>Whether you're new to programming or an experienced developer, it's easy to learn and use Python.</p>
-                <a href="#">Start with our Beginner's Guide</a>
-            </div>
-            <div class="widget-card">
-                <h2>Download</h2>
-                <p>Whether you're new to programming or an experienced developer, it's easy to learn and use Python.</p>
-                <a href="#">Start with our Beginner's Guide</a>
-            </div>
-            <div class="widget-card">
-                <h2>Docs</h2>
-                <p>Whether you're new to programming or an experienced developer, it's easy to learn and use Python.</p>
-                <a href="#">Start with our Beginner's Guide</a>
-            </div>
-            <div class="widget-card">
-                <h2>Jobs</h2>
-                <p>Whether you're new to programming or an experienced developer, it's easy to learn and use Python.</p>
-                <a href="#">Start with our Beginner's Guide</a>
-            </div>
-        </div>
-    </section>
-
+    </main>
 </body>
 
 </html>
