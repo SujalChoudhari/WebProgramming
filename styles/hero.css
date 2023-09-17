@@ -2,15 +2,16 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 3vh 15vw 0 15vw;
+    margin: 2vh 15vw 0 15vw;
     background-color: #f0f8ff;
     padding: 3vh 3vw;
     border: 1px solid black;
-    background-image: url(https://i.pinimg.com/originals/51/f4/32/51f43230dda0d1bf4b4bfc214c718b0d.jpg);
+    background-image: url(../images/hero.jpg);
 }
 
 .hero-title{
     font-size: 5vh;
+    color: #ddd;
 }
 
 .hero-button-holder{
