@@ -20,3 +20,24 @@
     padding: 0vh 3vw;
     transform: translateY(2vh);
 }
+
+.nutshell-content{
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nutshell-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 3vh;
+}
+
+.nutshell-card {
+    width: 30vw;
+    padding: 4vh;
+}
