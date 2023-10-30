@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Form</title>
+    <style>
+        span {
+            color: red;
+        }
+
+        input {
+            width: 40vw;
+            padding: 5px;
+            background-color: azure;
+        }
+
+        button {
+            margin: 30px;
+            padding: 10px;
+            background-color: aquamarine;
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body align="center">
+    <h1 style="margin-top: 40vh;">Our Form</h1>
+    <h6><span>* are required fields</span></h6>
+    <label for="name">Name<span>*</span>: </label>
+    <input type="text" name="name" id="name" required>
+    <br>
+    <br>
+    <label for="email"> Email<span>*</span>:</label>
+    <input type="email" name="email" id="email" required>
+    <br>
+    <br>
+    <label for="phone"> Phone:</label>
+    <input type="tel" name="phone" id="phone">
+    <br>
+    <br>
+    <div>
+        <button type="reset" onclick="onReset(event)">Reset</button>
+        <button onclick="onValidate(event)">Validate</button>
+        <button onclick="onSubmit(event)">Submit</button>
+    </div>
+
+    <div>
+        <p id="alert">
+        </p>
+    </div>
+
+    <script>
+        var isValidated = false;
+        var alertMessage = "";
+        var alertText = document.getElementById("alert");
+        var nameText = document.getElementById("name");
+        var emailText = document.getElementById("email");
+        var phoneText = document.getElementById("phone");
+
+        const onReset = (e) => {
+            nameText.value = "";
+            emailText.value = "";
+            phoneText.value = "";
+            alertMessage = "";
+            alertText.innerHTML = "";
+            phoneText.style.backgroundColor = "#ffffff";
+            phoneText.style.backgroundColor = "#ffffff";
+            nameText.style.backgroundColor = "#ffffff";
+            emailText.style.backgroundColor = "#ffffff";
+        }
+
+        const onValidate = (e) => {
+            phoneText.style.backgroundColor = "#99ff99";
+            phoneText.style.backgroundColor = "#99ff99";
+            nameText.style.backgroundColor = "#99ff99";
+            emailText.style.backgroundColor = "#99ff99";
+            isValidated = true;
+            alertMessage = "";
+            if (nameText.value == "") {
+                alertMessage += "Warning: Name cannot be empty\n"
+                isValidated = false;
+                nameText.style.backgroundColor = "#ff9999";
+            }
+
+            let regex = /^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$/;
+            if (!emailText.value.match(regex)) {
+                alertMessage += "Warning: Please Enter Valid Email\n";
+                isValidated = false;
+                emailText.style.backgroundColor = "#ff9999";
+
+            }
+
+            if ((nameText.value.match(/ /g) || []) < 2) {
+                alertMessage += "Warning: Please Input Full name\n";
+                isValidated = false;
+                nameText.style.backgroundColor = "#ff9999";
+            }
+
+            if (phoneText.value.toUpperCase() !== phoneText.value.toLowerCase()) {
+                alertMessage += "Warning: Phone No cannot contain Alphabets\n";
+                isValidated = false;
+                phoneText.style.backgroundColor = "#ff9999";
+            }
+
+
+            if (isValidated) {
+                alertMessage = "Data is Correct\n";
+            }
+            alertText.innerText = alertMessage;
+
+
+        }
+
+        const onSubmit = (e) => {
+            if (!isValidated) {
+                alertMessage = "Warning: Cannot Submit before Validating!";
+                alertText.innerText = alertMessage;
+                return;
+            }
+            onReset(null);
+            alert("Login Successfull!");
+        }
+    </script>
+</body>
+
+</html>
